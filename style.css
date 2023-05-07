@@ -9,7 +9,7 @@
 
 
   body {
-    background-color: #d8cdcd;
+    background-color: #8f92a0;
     color: #1f1945;
     font-size: 18px;
     width: 100vw;
@@ -20,7 +20,7 @@
 
   .container {
     display: block;
-    background-color: #68b3a8;
+    background-color: #e0e0eb;
     max-width: 35vw;
     min-height: 50vh;
     margin: 10vh auto;
@@ -98,3 +98,5 @@
     color: #fff;
     box-shadow: .5em .5em .5em rgba(0, 0, 0, .20);
   }
+
+  
