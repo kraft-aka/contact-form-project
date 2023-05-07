@@ -12,18 +12,21 @@
       <header>
         <h1 class="title">Please Submit Form</h1>
       </header>
-      <p class="error-msg" id="error-msg"></p>
       <form action="/" id="form">
         <label for="first-name">first name</label>
+        <span class="error-msg" id="error-msg-first--name"></span>
         <input type="text" id="first-name" placeholder="enter first name" />
         <label for="last-name">last name</label>
+        <span class="error-msg" id="error-msg-last--name"></span>
         <input type="text" id="last-name" placeholder="enter last name" />
         <label for="email">email</label>
+        <span class="error-msg" id="error-msg-email"></span>
         <input type="email" id="email" placeholder="enter email address" />
-        <div class="container-checkbox">
+        <span class="error-msg" id="error-msg-checkbox"></span>
+        <span class="container-checkbox">
           <input type="checkbox" id="checkbox-form" />
-          <span><a href= https://education.omr.com/policies/privacy-policy>Privacy Policy documentation</a></span>
-        </div>
+          <a href= https://education.omr.com/policies/privacy-policy>Privacy Policy documentation</a>
+        </span>
         <input
           type="submit"
           name="form-submit"

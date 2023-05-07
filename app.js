@@ -1,39 +1,32 @@
 const firstNameEl = document.getElementById("first-name");
-const lastNameEl = document.getElementById("last-name")
-const emailEl = document.getElementById("email")
+const lastNameEl = document.getElementById("last-name");
+const emailEl = document.getElementById("email");
 const checkboxEl = document.getElementById("checkbox-form");
 const submitBtn = document.getElementById("form-submit");
 const formEl = document.getElementById("form");
 const containerEl = document.getElementById("container");
-const errorEl = document.getElementById("error-msg");
-
-console.log(checkboxEl.checked);
-
-// checkboxEl.addEventListener('change', (e)=> {
-//   return e.target.checked ? true : false
-// })
-
-// function submitForm() {
-//   if (checkboxEl.checked == true) return formEl.submit();
-// }
+const errorElfName = document.getElementById("error-msg-first--name");
+const errorElLastName = document.getElementById("error-msg-last--name");
+const errorElEmail = document.getElementById("error-msg-email");
+const errorElCheckBox = document.getElementById("error-msg-checkbox");
 
 formEl.addEventListener("submit", (e) => {
   e.preventDefault();
-  if (
-    firstNameEl.value == "" ||
-    (firstNameEl.value == null && lastNameEl.value == "") ||
-    (lastNameEl.value == null)
-  ) {
-    errorEl.innerHTML = "You have to fill all fields";
-  } else if(checkboxEl.checked == false) {
-    errorEl.innerHTML = 'You have to agree with privacy policy'
+
+  if (firstNameEl.value == "" || firstNameEl.value == null) {
+    errorElfName.innerHTML = "first name must be filled";
   }
-  
-  else {
-    errorEl.style.display = 'none'
+  if (lastNameEl.value == "" || lastNameEl.value == null) {
+    errorElLastName.innerHTML = "last name msut be filled";
+  }
+  if (emailEl.value == "" || emailEl.value == null) {
+    errorElEmail.innerHTML = "email must be filled";
+  }
+
+  if (checkboxEl.checked === false) {
+    errorElCheckBox.innerHTML = "you must agree with privat policy";
+  } else {
     formEl.submit();
-    setTimeout(() => {
-      containerEl.classList.add("hide");
-    }, 1500);
+    containerEl.classList.add("hide");
   }
 });
