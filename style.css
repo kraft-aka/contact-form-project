@@ -28,6 +28,11 @@ body {
   box-shadow: 2em 2em 2.5em rgba(0,0,0,.20);
 }
 
+.hide {
+  visibility: hidden;
+  display: none;
+}
+
 header {
   margin-bottom: 2em;
   text-align: center;
@@ -58,4 +63,9 @@ input {
 
 #checkbox-form {
   padding: 1em;
+}
+
+#error-msg {
+  display: block;
+  color: #f80505;
 }
